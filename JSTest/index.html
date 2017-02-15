@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>测试程序</title>
+    </head>
+    <body>
+        <div id="bg"></div>
+        <br></br>
+        测试OC和JS交互
+        <br/>
+        <button style="height:40px;width:150px;" onClick="showLog('hello world')">JS调用OC_打印log</button>
+            <br/>
+            <br></br>
+            <button style="height:40px;width:150px;" onClick="addSubView()">JS调用OC_添加视图</button>
+            <br></br>
+                <button style="height:40px;width:150px;" onClick="getUserInfo()">JS调用OC_获取用户信息</button>
+                <br></br>
+                    <input type="text" id="input_text" name="input_text">
+                        <script type="text/javascript">
+                            function showLog(){
+                                window.Alex.showLog();
+                            }
+                            function addSubView(){
+                                window.Alex.addSubView();
+                            }
+                        
+                        function getUserInfo(){
+                            var userInfo = window.Alex.getUserInfo();
+                            alert(userInfo);
+                        }
+                        
+                        function changeColor(){
+                            var ranColor = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6); //随机生成颜色
+                            document.bgColor = ranColor;
+                            document.getElementById("input_text").value = '背景色：'+ranColor;
+                            return ranColor;
+                        }
+                        </script>
+    </body>
+</html>
