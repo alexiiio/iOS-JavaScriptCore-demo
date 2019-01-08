@@ -13,7 +13,7 @@
             <br></br>
             <button style="height:40px;width:150px;" onClick="addSubView()">JS调用OC_添加视图</button>
             <br></br>
-                <button style="height:40px;width:150px;" onClick="getUserInfo()">JS调用OC_获取用户信息</button>
+                <button style="height:40px;width:150px;" onClick="Person.sayHi()">JS调用Person SayHi</button>
                 <br></br>
                     <input type="text" id="input_text" name="input_text">
                         <script type="text/javascript">
@@ -22,19 +22,15 @@
                             }
                             function addSubView(){
                                 window.Alex.addSubView();
+                                alert("afafa");
                             }
                         
-                        function getUserInfo(){
-                            var userInfo = window.Alex.getUserInfo();
-                            alert(userInfo);
-                        }
-                        
-                        function changeColor(){
-                            var ranColor = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6); //随机生成颜色
-                            document.bgColor = ranColor;
-                            document.getElementById("input_text").value = '背景色：'+ranColor;
-                            return ranColor;
-                        }
+                            function changeColor(){
+                                var ranColor = '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6); //随机生成颜色
+                                document.bgColor = ranColor;
+                                document.getElementById("input_text").value = '背景色：'+ranColor;
+                                return ranColor;
+                            }
                         </script>
-    </body>
+                        </body>
 </html>

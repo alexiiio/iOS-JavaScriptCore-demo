@@ -14,6 +14,8 @@
 		02154D7F1DED4EA700B73151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02154D7E1DED4EA700B73151 /* Assets.xcassets */; };
 		02154D821DED4EA700B73151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02154D801DED4EA700B73151 /* LaunchScreen.storyboard */; };
 		02154D8A1DED4EDE00B73151 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 02154D891DED4EDE00B73151 /* index.html */; };
+		029A9B2121E4A36900892E3D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A9B2021E4A36900892E3D /* Person.m */; };
+		029A9B2421E4A66300892E3D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 029A9B2321E4A66300892E3D /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		02154D811DED4EA700B73151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02154D831DED4EA700B73151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02154D891DED4EDE00B73151 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		029A9B1F21E4A36900892E3D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		029A9B2021E4A36900892E3D /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		029A9B2221E4A66300892E3D /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		029A9B2321E4A66300892E3D /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,10 @@
 				02154D761DED4EA700B73151 /* AppDelegate.m */,
 				02154D781DED4EA700B73151 /* ViewController.h */,
 				02154D791DED4EA700B73151 /* ViewController.m */,
+				029A9B2221E4A66300892E3D /* RootViewController.h */,
+				029A9B2321E4A66300892E3D /* RootViewController.m */,
+				029A9B1F21E4A36900892E3D /* Person.h */,
+				029A9B2021E4A36900892E3D /* Person.m */,
 				02154D891DED4EDE00B73151 /* index.html */,
 				02154D7B1DED4EA700B73151 /* Main.storyboard */,
 				02154D7E1DED4EA700B73151 /* Assets.xcassets */,
@@ -157,7 +167,9 @@
 			files = (
 				02154D7A1DED4EA700B73151 /* ViewController.m in Sources */,
 				02154D771DED4EA700B73151 /* AppDelegate.m in Sources */,
+				029A9B2121E4A36900892E3D /* Person.m in Sources */,
 				02154D741DED4EA700B73151 /* main.m in Sources */,
+				029A9B2421E4A66300892E3D /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
