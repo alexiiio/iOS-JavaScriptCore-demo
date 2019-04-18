@@ -44,18 +44,17 @@
     self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     /*
      通过 UIWebView 来获取 JSContext ，通过获取到的 context 来执⾏ JS 代码。
-     会导致控制器无法释放。
+    -- 会导致控制器无法释放。--     实际是延迟释放。
      */
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     // 自己创建的context不能响应JS的方法。只有用该context调用的方法才执行。
 //    self.context = [[JSContext alloc]initWithVirtualMachine:[[JSVirtualMachine alloc]init]];
 //    self.context.name = @"Alex";
     /*
-     这一步是把self对象传到JS环境，用来调用self的方法。
-     使用block添加方法到JS环境时，不需要传self对象。
-     使用JSExport协议添加的方法，需要传self对象。
-     不要使用该方法把webView传给JS环境。
-     把方法写到其他类里，把实现类实例对象传给JS环境。
+     这一步是把对象传到JS环境，用来调用对象实现的方法。
+     使用block添加方法到JS环境时，不需要传调用对象。
+     使用JSExport协议添加的方法，需要传调用对象。
+     可以把JS要调用的方法写到一个类里，把实现类的实例对象传给JS环境。
      */
 //    self.context[@"Alex"] = self;
     Person *person = [[Person alloc]init];

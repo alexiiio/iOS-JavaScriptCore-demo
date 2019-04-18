@@ -11,18 +11,21 @@
         <button style="height:40px;width:150px;" onClick="showLog('hello world')">JS调用OC_打印log</button>
             <br/>
             <br></br>
-            <button style="height:40px;width:150px;" onClick="addSubView()">JS调用OC_添加视图</button>
+            <button style="height:40px;width:150px;" onClick="callMethodAddSubView()">JS调用OC_添加视图</button>
             <br></br>
                 <button style="height:40px;width:150px;" onClick="Person.sayHi()">JS调用Person SayHi</button>
                 <br></br>
                     <input type="text" id="input_text" name="input_text">
                         <script type="text/javascript">
+<!--                            OC里实现的同名方法会覆盖掉该方法。-->
                             function showLog(){
                                 window.Alex.showLog();
                             }
-                            function addSubView(){
+<!--                        可以在点击按钮时先调用js自己的方法，做完某些操作之后再调用OC里的方法。-->
+                            function callMethodAddSubView(){
+                                alert("添加了一个view");
+                                document.getElementById("input_text").value = 'addSubView';
                                 window.Alex.addSubView();
-                                alert("afafa");
                             }
                         
                             function changeColor(){
